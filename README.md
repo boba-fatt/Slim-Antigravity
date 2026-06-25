@@ -107,7 +107,7 @@ Once initialized, you can reference the skills in your AI CLI:
 ## 🤝 Contributing & Credits
 
 ### Credits
-This project is built upon the wonderful foundation created by **Jayanth Chandra** in the original [jayanthchandra/Slim](https://github.com/jayanthchandra/Slim) repository. We are incredibly grateful for their work in bringing token-efficient MCP skill compression to AI CLI clients.
+This project is built upon the wonderful foundation created by **Jayanth Chandra** in the original [jayanthchandra/Slim](https://github.com/jayanthchandra/Slim) repository. I am incredibly grateful for their work in bringing token-efficient MCP skill compression to AI CLI clients.
 
 ### Contributing
 We welcome contributions to this Antigravity-adapted fork!
