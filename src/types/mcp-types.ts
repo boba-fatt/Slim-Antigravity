@@ -26,7 +26,7 @@ export interface SkillRegistry {
 }
 
 export interface DetectedCLI {
-  name: 'gemini' | 'qwen' | 'claude';
+  name: 'gemini' | 'qwen' | 'claude' | 'agy';
   configPath: string;
 }
 

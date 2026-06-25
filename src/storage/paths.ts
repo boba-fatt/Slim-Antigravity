@@ -57,3 +57,12 @@ export function getCliConfigPath(cli: string): string {
   const home = os.homedir();
   return path.join(home, `.${cli}`, 'settings.json');
 }
+
+export function getPluginPaths(cli: string): string[] {
+  const home = os.homedir();
+  const paths = [path.join(home, `.${cli}`, 'config', 'plugins')];
+  if (cli === 'agy') {
+    paths.push(path.join(home, '.gemini', 'config', 'plugins'));
+  }
+  return paths;
+}

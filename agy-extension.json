@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "description": "Compresses MCP tool schemas into lightweight skill signatures to reduce token usage by ~95%.",
   "mcpServers": {},
-  "contextFileName": "README.md"
+  "contextFileName": "README.md",
+  "runtime": "agy"
 }

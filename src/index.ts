@@ -53,7 +53,7 @@ Commands:
   doc       Generate markdown documentation for skills
 
 Options:
-  --cli <name>  Manually specify CLI (gemini, qwen, claude)
+  --cli <name>  Manually specify CLI (agy, gemini, qwen, claude)
       `);
       break;
   }
