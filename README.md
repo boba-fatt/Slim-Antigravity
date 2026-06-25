@@ -6,6 +6,15 @@
 
 **slim** is a lightweight TypeScript-based extension for AI CLIs (Gemini, Qwen, Claude) that dramatically reduces Model Context Protocol (MCP) token usage by compressing tool exposure.
 
+> [!NOTE]
+> This repository is a fork of the original [jayanthchandra/Slim](https://github.com/jayanthchandra/Slim), which worked wonders with the Gemini CLI. This version has been adapted and refactored for **Antigravity (`agy`) CLI** compliance.
+> 
+> Key changes include:
+> - **Multi-Directory Scanning**: Automatically discovers plugin-specific manifests in `~/.gemini/config/plugins/` as well as general extensions in `~/.gemini/extensions/`.
+> - **Path Interpolation**: Resolves `$extensionPath` and `${extensionPath}` dynamically.
+> - **Cross-Platform Separators**: Safely translates system-independent path separator placeholders (`${/}` and `${\}`) to the system path separator.
+> - **Remote Server Handling**: Gracefully skips remote HTTP/SSE configurations that do not utilize local stdio command spawns.
+
 ---
 
 ## 🚀 The Problem: Token Bloat
@@ -95,15 +104,20 @@ Once initialized, you can reference the skills in your AI CLI:
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing & Credits
 
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) (coming soon) for details on our code of conduct and the process for submitting pull requests.
+### Credits
+This project is built upon the wonderful foundation created by **Jayanth Chandra** in the original [jayanthchandra/Slim](https://github.com/jayanthchandra/Slim) repository. We are incredibly grateful for their work in bringing token-efficient MCP skill compression to AI CLI clients.
 
+### Contributing
+We welcome contributions to this Antigravity-adapted fork!
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+If you have enhancements that are general to the original tool, please consider submitting them to the upstream repository at [jayanthchandra/Slim](https://github.com/jayanthchandra/Slim).
 
 ---
 
@@ -112,4 +126,4 @@ We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) (com
 Distributed under the **ISC License**. See `LICENSE` for more information.
 
 ---
-*Built with ❤️ for the AI Engineer community.*
+*Built with ❤️ for the AI Engineer and Antigravity community.*
