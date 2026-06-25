@@ -35,27 +35,39 @@ When the LLM calls `github_tools("create_issue", { ... })`, the **slim** runtime
 
 ---
 
-## 📦 Installation
+## 🚦 Installation & Setup
 
-1. **Clone and Build:**
+### For Antigravity CLI (`agy`) (Recommended)
+
+1. **Install natively** using the `agy` CLI. This automatically registers the plugin and its hooks:
    ```bash
-   git clone https://github.com/your-repo/slim.git
-   cd slim
-   npm install
-   npm run build
+   agy plugin install https://github.com/boba-fatt/Slim-Antigravity
    ```
 
-2. **Link Globally:**
+2. **Initialize** the context compressor:
    ```bash
-   npm link
+   node ~/.gemini/config/plugins/slim/dist/index.js init --cli gemini
    ```
+   *(Or run it from the active plugin path if linked for development)*
 
 ---
 
-## 🚦 Usage
+## 🚦 Usage & Details
+
+### How it Scans
+When running `slim init`, **slim** automatically scans:
+1. **Global Configuration**: `~/.gemini/settings.json` (for globally defined `mcpServers`).
+2. **Active Plugins**: `~/.gemini/config/plugins/*/gemini-extension.json` (for plugin-internal MCP servers).
+3. **General Extensions**: `~/.gemini/extensions/*/gemini-extension.json` (for general CLI extensions).
+
+### Path Variables & Interpolation
+**slim** resolves and interpolates configuration variables dynamically:
+- `${extensionPath}` and `$extensionPath` are resolved to the absolute folder path of the extension.
+- Platform-independent path separators `${/}` and `${\}` are automatically converted to the correct system separator (`\` on Windows, `/` on Linux/macOS).
+- Remote HTTP/SSE MCP configurations (using `httpUrl`) are safely skipped.
 
 ### 1. Initialize
-Scan your host CLI settings and generate compressed skills.
+Scan your host CLI settings and generate compressed skills:
 ```bash
 slim init
 ```

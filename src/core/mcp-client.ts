@@ -10,6 +10,7 @@ export class McpClient {
 
   async connect(config: MCPServerConfig): Promise<void> {
     this.process = spawn(config.command, config.args, {
+      cwd: config.cwd,
       env: { ...process.env, ...config.env },
       stdio: ['pipe', 'pipe', 'inherit'] // pipe stdin/stdout, inherit stderr
     });

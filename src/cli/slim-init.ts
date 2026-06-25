@@ -28,6 +28,11 @@ export async function slimInit() {
       const config = servers[name];
       process.stdout.write(`⏳ Processing ${name}... `);
 
+      if (!config.command) {
+        console.log('❌ (Remote HTTP/SSE servers not supported)');
+        continue;
+      }
+
       const tools = await fetchTools(name, config);
       if (tools.length === 0) {
         console.log('❌ (No tools found)');

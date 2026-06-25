@@ -2,6 +2,7 @@ export interface MCPServerConfig {
   command: string;
   args: string[];
   env?: Record<string, string>;
+  cwd?: string;
 }
 
 export interface MCPTool {
