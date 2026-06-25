@@ -11,7 +11,7 @@ Your task is to ensure the **slim** environment is correctly initialized and the
      - `dist/` (entire folder)
      - `commands/` (entire folder)
      - `hooks/` (entire folder)
-     - `gemini-extension.json`, `qwen-extension.json`, `claude-extension.json`
+     - `agy-extension.json`, `qwen-extension.json`, `claude-extension.json`
      - `package.json`, `README.md`, `slim.png`
    - Use your `run_shell_command` tool to perform these file operations.
 
